@@ -18,6 +18,8 @@ public class App {
         JButton butdal;
         JButton butplus;
         JButton butminus;
+        JButton butkomats;
+        JButton butzimmaina;
         JFrame frame = new JFrame("Autoplaca vadibas panelis profesionaliem");
         JTextField textfield;  
         butminus = new JButton("-");
@@ -31,10 +33,14 @@ public class App {
         but7 = new JButton("7");
         but8 = new JButton("8");
         but9 = new JButton("9");
+        butzimmaina = new JButton("+/-");
+        butkomats = new JButton(".");
         butreiz = new JButton("×");
         butdal = new JButton(":");
         butplus = new JButton("+");
+        butzimmaina.setBounds(50,50,50,50);
         butminus.setBounds(50,50,50,50);
+        butkomats.setBounds(50,50,50,50);
         but0.setBounds(50,50,50,50);
         but.setBounds(50,50,50,50);
         but2.setBounds(50,50,50,50);
@@ -48,7 +54,9 @@ public class App {
         butreiz.setBounds(50,50,50,50);
         butdal.setBounds(50,50,50,50);
         butplus.setBounds(50,50,50,50);
+        butzimmaina.setLocation(20,260);
         but0.setLocation(80,260);
+        butkomats.setLocation(140,260);
         butminus.setLocation(200,260);
         but.setLocation(20,80);
         but2.setLocation(80,80);
@@ -63,6 +71,7 @@ public class App {
         butdal.setLocation(200,140);
         butplus.setLocation(200,200);
         frame.add(but);
+        frame.add(butkomats);
         frame.add(but0);
         frame.add(but2);
         frame.add(but3);
@@ -76,6 +85,7 @@ public class App {
         frame.add(butdal);
         frame.add(butplus);
         frame.add(butminus);
+        frame.add(butzimmaina);
      textfield = new JTextField("kalkulatora sadala");
      textfield.setBounds(50, 150, 200, 30);
      textfield.setLocation(20,20);
