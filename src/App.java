@@ -8,11 +8,11 @@ import javax.swing.JButton;
 
 public class App {
     public static void main(String[] args) throws Exception {
-        double first;
-        double second;
-        double result;
-        String operation;
-        String answer;
+        // double first;
+        // double second;
+        // double result;
+        // String operation;
+        // String answer;
 
 
         JButton but;
