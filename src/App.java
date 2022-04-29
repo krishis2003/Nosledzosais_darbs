@@ -139,17 +139,17 @@ public class App {
         butdal = new JButton(":");
         butdal.addActionListener(new ActionListener() {
             public void actionPerformed(ActionEvent e)            {
-                  Double first = Double.parseDouble(textfield.getText());
+  //                Double first = Double.parseDouble(textfield.getText());
                 textfield.setText("");
-                String operation =":";
+   //             String operation =":";
             }
         }); 
         butplus = new JButton("+");
         butplus.addActionListener(new ActionListener() {
             public void actionPerformed(ActionEvent e)            {
-               Double first = Double.parseDouble(textfield.getText());
+    //           Double first = Double.parseDouble(textfield.getText());
                 textfield.setText("");
-                String operation ="+";
+     //           String operation ="+";
             }
         }); 
         butzimmaina.setBounds(50,50,50,50);
