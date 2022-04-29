@@ -13,6 +13,7 @@ public class App {
         double result;
         String operation;
         String answer;
+        
 
         JButton but;
         JButton but0;
