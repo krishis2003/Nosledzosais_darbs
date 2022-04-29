@@ -13,7 +13,7 @@ public class App {
         double result;
         String operation;
         String answer;
-        
+
 
         JButton but;
         JButton but0;
@@ -139,7 +139,9 @@ public class App {
         butdal = new JButton(":");
         butdal.addActionListener(new ActionListener() {
             public void actionPerformed(ActionEvent e)            {
-                System.out.println("You clicked the button dal");
+                  Double first = Double.parseDouble(textfield.getText());
+                textfield.setText("");
+                String operation =":";
             }
         }); 
         butplus = new JButton("+");
