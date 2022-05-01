@@ -8,14 +8,15 @@ import javax.swing.JButton;
 
 public class App {
     public static void main(String[] args) throws Exception {
-        // double first;
-        // double second;
-        // double result;
-        // String operation;
-        // String answer;
+        double first;
+        double second;
+        double result ;
+        String operation ;
+        String answer;
 
 
         JButton but;
+        JButton butvienads;
         JButton but0;
         JButton but2;
         JButton but3;
@@ -41,8 +42,9 @@ public class App {
         butminus = new JButton("-");
         butminus.addActionListener(new ActionListener() {
             public void actionPerformed(ActionEvent e)            {
-                String nummber = textfield.getText()+butminus.getText();
-                textfield.setText(nummber);
+                Double first = Double.parseDouble(textfield.getText());
+                textfield.setText("");
+                String operation ="+";
             }
         }); 
         but = new JButton("1");
@@ -121,7 +123,7 @@ public class App {
         butzimmaina = new JButton("+/-");
         butzimmaina.addActionListener(new ActionListener() {
             public void actionPerformed(ActionEvent e)            {
-                System.out.println("You clicked the button zimmaina");
+               Double second = Double.parseDouble(textfield.getText());
             }
         }); 
         butkomats = new JButton(".");
@@ -133,25 +135,65 @@ public class App {
         butreiz = new JButton("×");
         butreiz.addActionListener(new ActionListener() {
             public void actionPerformed(ActionEvent e)            {
-                System.out.println("You clicked the button reiz");
+                Double first = Double.parseDouble(textfield.getText());
+                textfield.setText("");
+                String operation ="×";
             }
         }); 
         butdal = new JButton(":");
         butdal.addActionListener(new ActionListener() {
             public void actionPerformed(ActionEvent e)            {
-  //                Double first = Double.parseDouble(textfield.getText());
+                  Double first = Double.parseDouble(textfield.getText());
                 textfield.setText("");
-   //             String operation =":";
+                String operation =":";
             }
         }); 
         butplus = new JButton("+");
         butplus.addActionListener(new ActionListener() {
             public void actionPerformed(ActionEvent e)            {
-    //           Double first = Double.parseDouble(textfield.getText());
+               Double first = Double.parseDouble(textfield.getText());
                 textfield.setText("");
-     //           String operation ="+";
+                String operation ="+";
             }
         }); 
+
+
+
+        butvienads = new JButton("=");
+        butvienads.addActionListener(new ActionListener() {
+            public void actionPerformed(ActionEvent e)            {
+                String answer;
+				second=Double.parseDouble(textfield.getText());
+				if (operation=="+")
+				{
+					result=first+second;
+					answer=String.format("%.2f", result);
+					textfield.setText(answer);
+				}
+				else if(operation=="-")
+				{
+					result=first-second;
+					answer=String.format("%.2f", result);
+					textfield.setText(answer);
+				}
+				else if(operation=="×")
+				{
+					result=first*second;
+					answer=String.format("%.2f", result);
+					textfield.setText(answer);
+				}
+				else if(operation==":")
+				{
+					result=first/second;
+					answer=String.format("%.2f", result);
+					textfield.setText(answer);
+				}
+			}
+            }
+        );
+
+
+
         butzimmaina.setBounds(50,50,50,50);
         butminus.setBounds(50,50,50,50);
         butkomats.setBounds(50,50,50,50);
